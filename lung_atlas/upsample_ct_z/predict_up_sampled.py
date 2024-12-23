@@ -7,7 +7,7 @@ import format_convert.dcm_np_converter as converter
 import format_convert.spatial_normalize as spatial_normalize
 import basic_tissue_prediction.predict_rescaled as predictor
 import Tool_Functions.Functions as Functions
-import models.Unet_2D.test as test_model
+import classic_models.Unet_2D.test as test_model
 import numpy as np
 import warnings
 
