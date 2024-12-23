@@ -3,7 +3,7 @@ import sys
 import numpy as np
 
 sys.path.append('/ibex/scratch/projects/c2052/Lung_CAD_NMI/source_codes')
-import models.Unet_2D.test as test_model
+import classic_models.Unet_2D.test as test_model
 
 
 def check_point_path_generator(check_point_dict, direction):
