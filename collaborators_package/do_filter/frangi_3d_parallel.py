@@ -1,7 +1,7 @@
 import cv2
 from skimage.filters import frangi
 from Tool_Functions.Functions import func_parallel
-import models.Unet_3D.slicing_array_to_cubes as cube_array_converter
+import classic_models.Unet_3D.slicing_array_to_cubes as cube_array_converter
 import numpy as np
 
 
