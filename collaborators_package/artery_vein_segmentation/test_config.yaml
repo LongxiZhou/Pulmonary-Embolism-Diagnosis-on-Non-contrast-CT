@@ -1,0 +1,35 @@
+loaders:
+  batch_size: 2
+  mirror_padding: true
+  num_workers: 4
+  pad_width: 10
+  raw_internal_path: raw
+  test:
+    file_paths: /home/chuy/PycharmProjects/Artery_Vein_Segmentation/Data/CT_reinforce
+    slice_builder:
+      name: SliceBuilder
+      patch_shape:
+      - 128
+      - 128
+      - 128
+      stride_shape:
+      - 64
+      - 64
+      - 64
+    transformer:
+      raw:
+      - name: Standardize
+      - expand_dims: true
+        name: ToTensor
+model:
+  f_maps: 32
+  final_sigmoid: false
+  in_channels: 1
+  is_segmentation: true
+  layer_order: gcr
+  name: ResidualUNet3D
+  num_groups: 8
+  out_channels: 2
+model_path: /home/chuy/PycharmProjects/check_points/Artery_Vein_Seg/Step_2.pytorch
+predictor:
+  name: StandardPredictor
