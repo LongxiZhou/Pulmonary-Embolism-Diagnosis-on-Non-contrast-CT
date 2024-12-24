@@ -37,7 +37,7 @@ SPEA utilized an interpretable training strategy, and proposed a verifiable metr
 ## Time and Memory Complexity
 SPEA is light and can be run on most gaming laptop.
 - SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
-- Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 400 seconds (multi-threading) on CPU
+- Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
 ## Contact
 If you requrest our training data, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
