@@ -12,6 +12,10 @@ This project propose the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagnos
 
 Using non-contrast CT for PE diagnosis offers the potential to detect the condition at the onset of symptoms. However, identifying blockages on non-contrast CT is extremely challenging for human experts due to subtle visual cues. Our study demonstrates the successful application of artificial intelligence in accurately detecting these blockages on non-contrast CT, which may considerably reduce PE mortality.
 
+## SPEA Development and Evaluations
+<div align="center">
+  <img src="./github_resources/Figure 1.png" width=700 height=1400>
+</div>
 
 ## Run SPEA Method
 - Step 1): Dowload the source codes from github (note in github, folder ./Data_and_Models is empty).
