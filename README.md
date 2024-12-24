@@ -14,7 +14,7 @@ PE, caused by a blockage of blood flow in the lung arteries, results in millions
 
 The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
 
-SPEA can accurately diagnose PE on non-contrast CT scans, with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and real clinical translation, respectively. 
+Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and real clinical translation, respectively. 
 
 SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 during real clinical translation.
 
