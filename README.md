@@ -8,9 +8,17 @@ Longxi Zhou, et al. "Accurate Diagnosis of Pulmonary Embolism on Non-contrast CT
 ```
 
 ## Description
-This project propose the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagnosing pulmonary embolism (PE) on non-contrast CT scans. PE, caused by a blockage of blood flow in the lung arteries, results in millions of deaths annually. Notably, 93% of fatal PE cases occur within 2.5 hours of the initial symptoms, but the current diagnostic workflow for PE remains slow and inefficient. Consequently, the mortality rate of PE in the United States has remained unchanged for over three decades.
+This project proposes the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagnosing pulmonary embolism (PE) on non-contrast CT scans. 
 
-Using non-contrast CT for PE diagnosis offers the potential to detect the condition at the onset of symptoms. However, identifying blockages on non-contrast CT is extremely challenging for human experts due to subtle visual cues. Our study demonstrates the successful application of artificial intelligence in accurately detecting these blockages on non-contrast CT, which may considerably reduce PE mortality.
+PE, caused by a blockage of blood flow in the lung arteries, results in millions of deaths annually. Notably, 93% of fatal PE cases occur within 2.5 hours of the initial symptoms, but the current diagnostic workflow for PE remains slow and inefficient. Consequently, the mortality rate of PE in the United States has remained unchanged for over three decades.
+
+The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
+
+SPEA can accurately diagnose PE on non-contrast CT scans, with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and real clinical translation, respectively. 
+
+SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 during real clinical translation.
+
+
 
 ## SPEA Development and Evaluations
 <div align="center">
