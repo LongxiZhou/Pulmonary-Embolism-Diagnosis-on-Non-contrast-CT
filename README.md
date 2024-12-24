@@ -14,7 +14,7 @@ Using non-contrast CT for PE diagnosis offers the potential to detect the condit
 
 ## SPEA Development and Evaluations
 <div align="center">
-  <img src="./github_resources/Figure 1.png" width=700 height=700>
+  <img src="./github_resources/Figure 1.png" width=1200 height=1200>
 </div>
 
 ## Run SPEA Method
