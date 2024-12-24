@@ -33,3 +33,14 @@ SPEA utilized an interpretable training strategy, and proposed a verifiable metr
 - Step 5): Open './pulmonary_embolism_final/inference/predict_clot_from_raw.py', modify the top_dir_models to your local directory: "./Data_and_Models"
 - Step 6): Run 'predict_clot_from_raw.py', to see the example data.
 - Step 7): Change the path for .dcm files to predict your own data.
+
+## Time and Memory Complexity
+SPEA is light and can be run on most gaming laptop.
+- SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
+- Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 400 seconds (multi-threading) on CPU
+
+## Contact
+If you requrest our training data, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
+
+## License
+[Apache License 2.0](https://github.com/LongxiZhou/Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT/blob/main/LICENSE)
