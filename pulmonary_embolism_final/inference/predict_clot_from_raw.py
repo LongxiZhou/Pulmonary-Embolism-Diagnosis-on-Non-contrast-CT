@@ -23,7 +23,7 @@ if __name__ == '__main__':
     Functions.set_visible_device('1')
 
     # dcm files dir, please modify
-    rescaled_ct = dcm_to_np.establish_rescale_chest_ct(os.path.join(top_dir_models, 'example_data/cjw'))
+    rescaled_ct = dcm_to_np.establish_rescale_chest_ct(os.path.join(top_dir_models, 'example_data/Z134'))
 
     # Make sure the direction is current, otherwise the model will fail
     rescaled_ct = direction_inference.cast_to_standard_direction(
