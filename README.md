@@ -12,9 +12,9 @@ This project proposes the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagno
 
 PE, caused by a blockage of blood flow in the lung arteries, results in millions of deaths annually. Notably, 93% of fatal PE cases occur within 2.5 hours of the initial symptoms, but the current diagnostic workflow for PE remains slow and inefficient. Consequently, the mortality rate of PE in the United States has remained unchanged for over three decades.
 
-The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
+The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE.  Around 70%-90% PE patients received non-contrast CT before being suspected as PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
 
-Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and real clinical translation, respectively. 
+Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and prospective pilot study dataset, respectively. 
 
 SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 during real clinical translation.
 
@@ -26,6 +26,7 @@ SPEA utilized an interpretable training strategy, and proposed a verifiable metr
 </div>
 
 ## Run SPEA Method
+We provide a simplied version of SPEA (25% parameter of the complete version), with AUC of 0.870 on the internal test set.
 - Step 1): Dowload the source codes from github (note in github, folder ./Data_and_Models is empty).
 - Step 2): Download the file: "data_and_models.zip" from [Google Drive](https://drive.google.com/file/d/1QqhQwuZklHq2sY3fs3F7hgbriHCOJ6m2/view?usp=drive_link).
 - Step 3): Move "data_and_models.zip" into ./Data_and_Models, then decompress.
