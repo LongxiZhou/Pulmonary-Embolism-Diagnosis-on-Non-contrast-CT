@@ -41,7 +41,7 @@ SPEA is light and can be run on most gaming laptop.
 - Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
 ## Contact
-If you requrest our training data, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
+If you requrest our training data or SPEA with the complete parameter, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
 
 ## License
 [Apache License 2.0](https://github.com/LongxiZhou/Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT/blob/main/LICENSE)
