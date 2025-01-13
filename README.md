@@ -26,7 +26,7 @@ SPEA utilized an interpretable training strategy, and proposed a verifiable metr
 </div>
 
 ## Run SPEA Method
-We provide a simplied version of SPEA (25% parameter of the complete version), with AUC of 0.870 on the internal test set.
+We provide a simplied version of SPEA (25% model parameter of the complete version), with AUC of 0.870 on the internal test set.
 - Step 1): Dowload the source codes from github (note in github, folder ./Data_and_Models is empty).
 - Step 2): Download the file: "data_and_models.zip" from [Google Drive](https://drive.google.com/file/d/1QqhQwuZklHq2sY3fs3F7hgbriHCOJ6m2/view?usp=drive_link).
 - Step 3): Move "data_and_models.zip" into ./Data_and_Models, then decompress.
@@ -41,7 +41,7 @@ SPEA is light and can be run on most gaming laptop.
 - Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
 ## Contact
-If you requrest our training data or SPEA with the complete parameter, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
+If you requrest our training data or SPEA with the complete model parameter, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
 
 ## License
 [Apache License 2.0](https://github.com/LongxiZhou/Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT/blob/main/LICENSE)
