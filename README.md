@@ -28,7 +28,7 @@ SPEA utilized an interpretable training strategy, and proposed a verifiable metr
 ## Run SPEA Method
 We provide a simplied version of SPEA (25% model parameter of the complete version), with AUC of 0.870 on the internal test set.
 - Step 1): Dowload the source codes from github (note in github, folder ./Data_and_Models is empty).
-- Step 2): Download the file: "data_and_models.zip" from [Google Drive](https://drive.google.com/file/d/1QqhQwuZklHq2sY3fs3F7hgbriHCOJ6m2/view?usp=drive_link).
+- Step 2): Download the file: "data_and_models.zip" from [Google Drive](https://drive.google.com/file/d/17oBAySfVm8WAFWj31fSaU4JrrDtZYz5Z/view?usp=sharing).
 - Step 3): Move "data_and_models.zip" into ./Data_and_Models, then decompress.
 - Step 4): Establish the Conda environment with './Environment_SPEA.yml'.
 - Step 5): Open './pulmonary_embolism_final/inference/predict_clot_from_raw.py', modify the top_dir_models to your local directory of folder "./Data_and_Models"
