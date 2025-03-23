@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # print(os.path.join(top_dir_models, 'example_data/Z134'))
     rescaled_ct = dcm_to_np.establish_rescale_chest_ct(os.path.join(top_dir_models, 'example_data/Z134'))
     # exit()
-    # Make sure the direction is current, otherwise the model will fail
+    # Make sure the direction is in [1,0,0,0,1,0], otherwise the model will fail
     rescaled_ct = direction_inference.cast_to_standard_direction(
         rescaled_ct, model_path=os.path.join(top_dir_models, 'direction_normalize.pth'),
         augment_label_list=label_pickle)
@@ -70,5 +70,5 @@ if __name__ == '__main__':
 
     rank = get_rank_count(metric_value, distribution_list)
 
-    print("\n\nhigher a-v clot ratio means more possibility of pulmonary embolism")
-    print("in our data set of 4737 non-PE CT, this scan is higher than:", rank / 4737 * 100, '% of these scans')
+    print("\n\nhigher relative emboli ratio (RER) means more possibility of pulmonary embolism")
+    print("For reference: in our dataset of 4737 non-PE non-contrast CT, this RER is higher than:", rank / 4737 * 100, '% of non-PE scans')
