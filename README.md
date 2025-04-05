@@ -4,7 +4,7 @@ Code availability for project of "Accurate Diagnosis of Pulmonary Embolism on No
 ## Overview
 This repository provides Code availability for:
 ```
-Longxi Zhou, et al. "Accurate Diagnosis of Pulmonary Embolism on Non-contrast CT via Verifiable Learning and Sub-visual Analysis".
+Longxi Zhou, et al. "Beyond Perceptual Limit: Verifiable AI for Pulmonary Embolism Detection on Non-contrast CT".
 ```
 
 ## Description
