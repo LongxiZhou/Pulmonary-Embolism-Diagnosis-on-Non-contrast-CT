@@ -46,12 +46,12 @@ Most existing AI models produce fixed probability scores (e.g., 80%) based only 
 
 | Clinical Scenario                                | Typical PE Prevalence | Output from Uncalibrated AI | Output from SPEA (Calibrated) |
 |--------------------------------------------------|------------------------|------------------------------|-------------------------------|
-| General non-contrast CT for routine check        | ~0.1%                  | `80%`                        | **5%**                        |
-| Emergency CT for unexplained symptoms            | ~1%                    | `80%`                        | **30%**                       |
-| CT ordered due to strong suspicion of PE         | ~20%                   | `80%`                        | **95%**                       |
+| General non-contrast CT for routine check        | ~0.1%                  | 80%                        | 5%                        |
+| Emergency CT for unexplained symptoms            | ~1%                    | 80%                        | 30%                       |
+| CT ordered due to strong suspicion of PE         | ~20%                   | 80%                        | 95%                       |
 
 Without calibration, an “80%” prediction could mean wildly different real-world risks—causing either **overdiagnosis** or **missed critical cases**.
-SPEA solves this with a **training-free recalibration module**, allowing you to adapt posterior probability outputs to your clinical setting using just a **few labeled cases**.
+SPEA solves this with a **training-free recalibration** based on RER, allowing you to dynamically adapt posterior probability outputs to your clinical setting.
 
 To recalibrate SPEA on your local population, see:
 './pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py'
