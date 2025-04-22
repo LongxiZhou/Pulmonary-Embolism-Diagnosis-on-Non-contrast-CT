@@ -58,6 +58,8 @@ if __name__ == '__main__':
     metric_value = metrics['v0']
 
     from pulmonary_embolism_final.inference.posterior_pe_prob import posterior_prob
+    # This posterior_prob provides a naive estimation. 
+    # See pulmonary_embolism_final.inference.posterior_pe_adapt_to_new_site.py for how to calibrate SPEA to your clinical setting.
 
     positive_rer_dis = Functions.pickle_load_object(os.path.join(top_dir_models, 'rer_for_PE_positives.pickle'))
     negative_rer_dis = Functions.pickle_load_object(os.path.join(top_dir_models, 'rer_for_PE_negatives.pickle'))
