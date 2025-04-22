@@ -35,11 +35,6 @@ We provide a simplified version of SPEA (25% model parameter of the complete ver
 - Step 6): Read and run 'predict_clot_from_raw.py', to see the example data.
 - Step 7): Change the path for .dcm files to predict your own data.
 
-## Time and Memory Complexity
-SPEA is light and can be run on most gaming laptop.
-- SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
-- Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
-
 ## Recalibrate SPEA on Your Clinical Setting
 In real-world practice, **posterior probability calibration** is essential for making AI predictions clinically actionable—especially when doctors cannot directly verify the outputs.
 Most existing AI models produce fixed probability scores (e.g., 80%) based only on imaging features, without considering the clinical scenario or disease prevalence. However, the same scan could come from dramatically different settings:
@@ -47,8 +42,8 @@ Most existing AI models produce fixed probability scores (e.g., 80%) based only 
 | Clinical Scenario                                | Typical PE Prevalence | Output from Uncalibrated AI | Output from SPEA (Calibrated) |
 |--------------------------------------------------|------------------------|------------------------------|-------------------------------|
 | General non-contrast CT for routine check        | ~0.1%                  | 80%                        | **5%**                        |
-| Emergency CT for unexplained symptoms            | ~1%                    | 80%                        | **30%**                       |
-| CT ordered due to strong suspicion of PE         | ~20%                   | 80%                        | **95%**                       |
+| Emergency non-contrast CT             | ~1%                    | 80%                        | **30%**                       |
+| Non-contrast CT from suspicion PE patients         | ~20%                   | 80%                        | **95%**                       |
 
 Without calibration, an “80%” prediction could mean wildly different real-world risks—causing either **overdiagnosis** or **missed critical cases**.
 SPEA solves this with a **training-free recalibration** based on RER, allowing you to dynamically adapt posterior probability outputs to your clinical setting.
@@ -56,7 +51,10 @@ SPEA solves this with a **training-free recalibration** based on RER, allowing y
 To recalibrate SPEA on your local population, see:
 './pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py'
 
-
+## Time and Memory Complexity
+SPEA is light and can be run on most gaming laptop.
+- SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
+- Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
 ## Contact
 If you requrest our training data or SPEA with the complete model parameter, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
