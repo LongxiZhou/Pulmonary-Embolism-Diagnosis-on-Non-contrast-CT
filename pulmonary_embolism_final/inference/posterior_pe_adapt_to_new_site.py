@@ -247,16 +247,11 @@ if __name__ == '__main__':
     negative_rer_prospective = Functions.pickle_load_object(
         '/data_disk/pulmonary_embolism_final/data_clinical_translation/negative_rer.pickle')
 
-    import random
-    random.seed = 19565
-
     new_sequence = []
     for value in positive_rer_prospective:
         new_sequence.append((value, 1))
     for value in negative_rer_prospective:
         new_sequence.append((value, 0))
-
-    random.shuffle(new_sequence)
 
     for item in new_sequence:
         posterior_class.update_model(item[0], label_new=item[1])
