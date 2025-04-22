@@ -36,20 +36,36 @@ We provide a simplified version of SPEA (25% model parameter of the complete ver
 - Step 7): Change the path for .dcm files to predict your own data.
 
 ## Recalibrate SPEA on Your Clinical Setting
+
 In real-world practice, **posterior probability calibration** is essential for making AI predictions clinically actionable—especially when doctors cannot directly verify the outputs.
+
 Most existing AI models produce fixed probability scores (e.g., 80%) based only on imaging features, without considering the clinical scenario or disease prevalence. However, the same scan could come from dramatically different settings:
 
 | Clinical Scenario                                | Typical PE Prevalence | Output from Uncalibrated AI | Output from SPEA (Calibrated) |
 |--------------------------------------------------|------------------------|------------------------------|-------------------------------|
-| General non-contrast CT for routine check        | ~0.1%                  | 80%                        | **5%**                        |
-| Emergency non-contrast CT             | ~1%                    | 80%                        | **30%**                       |
-| Non-contrast CT from suspicion PE patients         | ~20%                   | 80%                        | **95%**                       |
+| General non-contrast CT for routine check        | ~0.1%                  | 80%                          | **5%**                        |
+| Emergency non-contrast CT                        | ~1%                    | 80%                          | **30%**                       |
+| Non-contrast CT from suspected PE patients       | ~20%                   | 80%                          | **95%**                       |
 
 Without calibration, an “80%” prediction could mean wildly different real-world risks—causing either **overdiagnosis** or **missed critical cases**.
+
 SPEA solves this with a **training-free recalibration** based on RER, allowing you to dynamically adapt posterior probability outputs to your clinical setting.
 
 To recalibrate SPEA on your local population, see:
-'./pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py'
+./pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py
+
+---
+### How Well-Calibrated is SPEA?
+
+SPEA's predictions are not just interpretable—they are also **exceptionally well-calibrated**. In our prospective study, the recalibrated probability mapping achieved:
+- **Expected Calibration Error (ECE)**: 0.0258  
+**ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPEA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 77.5% and 82.5%.
+By contrast, AI models in medical image classification typically show **ECEs between 0.1 and 0.4**, indicating poor probability calibration. This gap highlights why **posterior calibration is critical**: models with poor ECEs may give confident but unreliable probabilities, making clinical decisions risky.
+
+SPEA closes this gap, delivering reliable probabilistic outputs that clinicians can trust.
+
+
+
 
 ## Time and Memory Complexity
 SPEA is light and can be run on most gaming laptop.
