@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d5d75134-2c7c-46ca-9c4d-9b9de086de3e)![image](https://github.com/user-attachments/assets/c934ce62-1e5e-43d9-94ab-598af536cfa7)# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
+# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
 Code availability for project of "Accurate Diagnosis of Pulmonary Embolism on Non-contrast CT via Verifiable Learning and Sub-visual Analysis"
 
 
