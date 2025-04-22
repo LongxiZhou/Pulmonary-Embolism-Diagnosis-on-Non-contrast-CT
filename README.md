@@ -2,12 +2,12 @@
 
 
 ## Overview
-This repository provides Code availability for:
+This repository provides Code Availability for:
 ```
 Longxi Zhou, et al. "Beyond Perceptual Limit: Verifiable AI for Pulmonary Embolism Detection on Non-contrast CT".
 ```
 
-## Description
+## Background
 This project proposes the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagnosing pulmonary embolism (PE) on non-contrast CT scans. 
 
 PE, caused by a blockage of blood flow in the lung arteries, results in millions of deaths annually. Notably, 93% of fatal PE cases occur within 2.5 hours of the initial symptoms, but the current diagnostic workflow for PE remains slow and inefficient. Consequently, the mortality rate of PE in the United States has remained unchanged for over three decades.
