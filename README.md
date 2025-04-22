@@ -51,7 +51,7 @@ Most existing AI models produce fixed probability scores (e.g., 80%) based only 
 
 Without calibration, an “80%” prediction could mean wildly different real-world risks—causing either **overdiagnosis** or **missed critical cases**.
 
-SPEA solves this with a **training-free recalibration** based on RER, allowing you to dynamically adapt posterior probability outputs to your clinical setting.
+SPEA solves this with a **training-free recalibration** based on our proposed predictive indicator "Relative Emboli Ratio", allowing you to dynamically adapt posterior probability outputs to your clinical setting.
 
 To recalibrate SPEA on your local population, see:
 ./pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py
