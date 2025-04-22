@@ -58,14 +58,13 @@ To recalibrate SPEA on your local population, see:
 ### How Well-Calibrated is SPEA?
 
 SPEA's predictions are not just interpretable—they are also **exceptionally well-calibrated**. In our prospective study, the recalibrated probability mapping achieved:
-- **Expected Calibration Error (ECE)**: 0.0258  
+- **Expected Calibration Error (ECE)**: 0.0258
+  
 **ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPEA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 77.5% and 82.5%.
+
 By contrast, AI models in medical image classification typically show **ECEs between 0.1 and 0.4**, indicating poor probability calibration. This gap highlights why **posterior calibration is critical**: models with poor ECEs may give confident but unreliable probabilities, making clinical decisions risky.
 
 SPEA closes this gap, delivering reliable probabilistic outputs that clinicians can trust.
-
-
-
 
 ## Time and Memory Complexity
 SPEA is light and can be run on most gaming laptop.
