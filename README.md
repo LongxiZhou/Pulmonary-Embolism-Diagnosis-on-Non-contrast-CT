@@ -1,6 +1,7 @@
 # Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
 Code availability for project of "Accurate Diagnosis of Pulmonary Embolism on Non-contrast CT via Verifiable Learning and Sub-visual Analysis"
 
+
 ## Overview
 This repository provides Code availability for:
 ```
@@ -19,11 +20,11 @@ Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT sc
 SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 and an expected calibration error (ECE) of 0.0258 during the prospective pilot study.
 
 
-
 ## SPEA Development and Evaluations
 <div align="center">
   <img src="./github_resources/Figure 1.png" width=1200>
 </div>
+
 
 ## Run SPEA Method
 We provide a simplified version of SPEA (25% model parameter of the complete version), with AUC of 0.870 on the internal test set.
@@ -34,6 +35,7 @@ We provide a simplified version of SPEA (25% model parameter of the complete ver
 - Step 5): Open './pulmonary_embolism_final/inference/predict_clot_from_raw.py', modify the top_dir_models to your local directory of folder "./Data_and_Models"
 - Step 6): Read and run 'predict_clot_from_raw.py', to see the example data.
 - Step 7): Change the path for .dcm files to predict your own data.
+
 
 ## Recalibrate SPEA on Your Clinical Setting
 
@@ -66,13 +68,16 @@ By contrast, AI models in medical image classification typically show **ECEs bet
 
 SPEA closes this gap, delivering reliable probabilistic outputs that clinicians can trust.
 
+
 ## Time and Memory Complexity
 SPEA is light and can be run on most gaming laptop.
 - SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
 - Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
+
 ## Contact
 If you requrest our training data or SPEA with the complete model parameter, please contact Prof. Xin Gao at xin.gao@kaust.edu.sa
+
 
 ## License
 [Apache License 2.0](https://github.com/LongxiZhou/Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT/blob/main/LICENSE)
