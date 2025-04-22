@@ -1,4 +1,4 @@
-# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
+![image](https://github.com/user-attachments/assets/d5d75134-2c7c-46ca-9c4d-9b9de086de3e)![image](https://github.com/user-attachments/assets/c934ce62-1e5e-43d9-94ab-598af536cfa7)# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
 Code availability for project of "Accurate Diagnosis of Pulmonary Embolism on Non-contrast CT via Verifiable Learning and Sub-visual Analysis"
 
 
@@ -15,9 +15,9 @@ PE, caused by a blockage of blood flow in the lung arteries, results in millions
 
 The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE.  Around 70%-90% PE patients received non-contrast CT before being suspected as PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
 
-Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and prospective pilot study dataset, respectively. 
+Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and prospective observational dataset, respectively. 
 
-SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 and an expected calibration error (ECE) of 0.0258 during the prospective pilot study.
+SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 and an expected calibration error (ECE) of 0.0258 during the prospective observational study.
 
 
 ## SPEA Development and Evaluations
