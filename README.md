@@ -1,32 +1,25 @@
-# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
+<img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/5e19c0cb-f889-4337-8441-1c3d0745e788" /><img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/19983e28-d59e-41fd-a0a4-991fee816ea9" /># Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
 
 
 ## Overview
-This repository provides Code Availability for:
-```
-Longxi Zhou, et al. "Beyond Perceptual Limit: Verifiable AI for Pulmonary Embolism Detection on Non-contrast CT".
-```
+This repository provides Code Availability for the engneering details.
 
-## Background
-This project proposes the Sub-visual Pulmonary Emboli Analysis (SPEA) for diagnosing pulmonary embolism (PE) on non-contrast CT scans. 
+## Background about the disease
+Sub-visual Pulmonary Thrombi Analysis (SPTA) can diagnosing pulmonary embolism (PE) on non-contrast CT scans. 
 
-PE, caused by a blockage of blood flow in the lung arteries, results in millions of deaths annually. Notably, 93% of fatal PE cases occur within 2.5 hours of the initial symptoms, but the current diagnostic workflow for PE remains slow and inefficient. Consequently, the mortality rate of PE in the United States has remained unchanged for over three decades.
+PE, defined by a blockage of blood flow in the lung arteries, results in millions of deaths annually. PE typically presents as an acute event, and timely treatment can reduce its mortality from approximately 30% to less than 10%, but autopsy studies indicated that more than 50% of PE were missed diagnosed or misdiagnosed.
 
-The symptoms of PE are often non-specific, and in most cases, PE is not initially suspected. When general tests, such as non-contrast CT, fail to explain the symptoms, further evaluations may reveal evidence suggestive of PE.  Around 70%-90% PE patients received non-contrast CT before being suspected as PE. Directly diagnosing PE on non-contrast CT can considerably reduce PE mortality, but it has long been considered as impossible for human experts due to the faint visibility of emboli.
+The symptoms of PE are often non-specific, and the confirmatory test is CT pulmonary angiography (CTPA). But CTPA is usually inaccessible in resource-limited regions. In China, 93.82% CPTA conducted in Tier 3 hospitals, and the US performed 14.6-fold higher per capita rate of CTPA than China. This stark contrast underscores the significant disparity in access to CTPA, particularly in rural areas, smaller cities, and township hospitals.
 
-Trained with 43,841 scans, SPEA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.887 in internal, external, and prospective observational dataset, respectively. 
+Directly diagnosing PE on non-contrast CT is clinically significant, but it has long been considered as impossible for human experts due to the faint visibility of thrombi.
 
-SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with Brier score of 0.093 and an expected calibration error (ECE) of 0.0258 during the prospective observational study.
+Trained with 43,841 scans, SPTA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.890 in internal, external, and prospective observational dataset, respectively. 
 
-
-## SPEA Development and Evaluations
-<div align="center">
-  <img src="./github_resources/Figure 1.png" width=1200>
-</div>
+SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with an expected calibration error (ECE) less than 1% during the prospective observational study.
 
 
-## Run SPEA Method
-We provide a simplified version of SPEA (25% model parameter of the complete version), with AUC of 0.870 on the internal test set.
+## Run SPTA Method
+We provide a simplified version of SPTA (25% model parameter of the complete version), with AUC of 0.870 on the internal test set.
 - Step 1): Dowload the source codes from github (note in github, folder ./Data_and_Models is empty).
 - Step 2): Download the file: "data_and_models.zip" from [Google Drive](https://drive.google.com/file/d/17oBAySfVm8WAFWj31fSaU4JrrDtZYz5Z/view?usp=sharing).
 - Step 3): Move "data_and_models.zip" into ./Data_and_Models, then decompress.
@@ -36,7 +29,7 @@ We provide a simplified version of SPEA (25% model parameter of the complete ver
 - Step 7): Change the path for .dcm files to predict your own data.
 
 
-## Recalibrate SPEA on Your Clinical Setting
+## Recalibrate SPTA on Your Clinical Setting
 
 In real-world practice, **posterior probability calibration** is essential for making AI predictions clinically actionable—especially when doctors cannot directly verify the outputs.
 
@@ -52,25 +45,25 @@ Without calibration, an “80%” prediction could mean wildly different real-wo
 
 SPEA solves this with a **training-free recalibration** based on our proposed predictive indicator "Relative Emboli Ratio", allowing you to dynamically adapt posterior probability outputs to your clinical setting.
 
-To recalibrate SPEA on your local population, see:
+To recalibrate SPTA on your local population, see:
 ./pulmonary_embolism_final/inference/posterior_pe_adapt_to_new_site.py
 
 ---
 ### How Well-Calibrated is SPEA?
 
 SPEA's predictions are not just interpretable—they are also **exceptionally well-calibrated**. In our prospective study, the recalibrated probability mapping achieved:
-- **Expected Calibration Error (ECE)**: 0.0258
+- **Expected Calibration Error (ECE)**: ~1%
   
-**ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPEA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 77.5% and 82.5%.
+**ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPEA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 79% and 81%.
 
-By contrast, AI models in medical image classification typically show **ECEs between 0.1 and 0.4**, indicating poor probability calibration. This gap highlights why **posterior calibration is critical**: models with poor ECEs may give confident but unreliable probabilities, making clinical decisions risky.
+By contrast, AI models in medical image classification typically show **ECEs between 10% and 40%**, indicating poor probability calibration. This gap highlights why **posterior calibration is critical**: models with poor ECEs may give confident but unreliable probabilities, making clinical decisions risky.
 
-SPEA closes this gap, delivering reliable probabilistic outputs that clinicians can trust.
+SPTA closes this gap, delivering reliable probabilistic outputs that clinicians can trust.
 
 
 ## Time and Memory Complexity
-SPEA is light and can be run on most gaming laptop.
-- SPEA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
+SPTA is light and can be run on most gaming laptop.
+- SPTA requires GPU RAM >= 8GB and CPU RAM >= 24 GB
 - Inference needs about 35 seconds on one V100 GPU + 175 seconds (single thread) on CPU + 600 / num_cpu seconds
 
 
