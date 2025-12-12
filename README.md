@@ -1,4 +1,4 @@
-<img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/5e19c0cb-f889-4337-8441-1c3d0745e788" /><img width="468" height="14" alt="image" src="https://github.com/user-attachments/assets/19983e28-d59e-41fd-a0a4-991fee816ea9" /># Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
+# Pulmonary-Embolism-Diagnosis-on-Non-contrast-CT
 
 
 ## Overview
