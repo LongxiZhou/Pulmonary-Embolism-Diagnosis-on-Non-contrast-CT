@@ -11,11 +11,11 @@ PE, defined by a blockage of blood flow in the lung arteries, results in million
 
 The symptoms of PE are often non-specific, and the confirmatory test is CT pulmonary angiography (CTPA). But CTPA is usually inaccessible in resource-limited regions. In China, 93.82% CPTA conducted in Tier 3 hospitals, and the US performed 14.6-fold higher per capita rate of CTPA than China. This stark contrast underscores the significant disparity in access to CTPA, particularly in rural areas, smaller cities, and township hospitals.
 
-Directly diagnosing PE on non-contrast CT is clinically significant, but it has long been considered as impossible for human experts due to the faint visibility of thrombi.
+Non-contrast CT is faster, safer, and more widely available, but has long been considered non-diagnostic for PE as the vast majority of emboli are imperceptible to the human eye.
 
 Trained with 43,841 scans, SPTA can accurately diagnose PE on non-contrast CT scans with area-under-the-curve (AUC) scores of 0.895, 0.877, and 0.890 in internal, external, and prospective observational dataset, respectively. 
 
-SPEA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with an expected calibration error (ECE) less than 1% during the prospective observational study.
+SPTA utilized an interpretable training strategy, and proposed a verifiable metric that achieved accurate posterior probability calibration with an expected calibration error (ECE) less than 1% during the prospective observational study.
 
 
 ## Run SPTA Method
@@ -51,10 +51,10 @@ To recalibrate SPTA on your local population, see:
 ---
 ### How Well-Calibrated is SPEA?
 
-SPEA's predictions are not just interpretable—they are also **exceptionally well-calibrated**. In our prospective study, the recalibrated probability mapping achieved:
+SPTA's predictions are not just interpretable—they are also **exceptionally well-calibrated**. In our prospective study, the recalibrated probability mapping achieved:
 - **Expected Calibration Error (ECE)**: ~1%
   
-**ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPEA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 79% and 81%.
+**ECE** reflects the average deviation between predicted probabilities and actual event frequencies. For example, if SPTA assigns an 80% PE probability across a group of patients, an ECE of 0.0258 suggests that the actual rate of PE among those patients would fall between approximately 79% and 81%.
 
 By contrast, AI models in medical image classification typically show **ECEs between 10% and 40%**, indicating poor probability calibration. This gap highlights why **posterior calibration is critical**: models with poor ECEs may give confident but unreliable probabilities, making clinical decisions risky.
 
